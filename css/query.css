@@ -1,0 +1,46 @@
+/* Query for mobile version */
+
+:root {
+  --background: #15304c;
+  --highlight: #7498be;
+  --white: #fff;
+  font-family: "Harry Potter", sans-serif;
+}
+
+@media (max-width: 600px) {
+  header {
+    position: relative;
+  }
+
+  header nav {
+    position: absolute;
+    top: 70px;
+    background-color: var(--background);
+    width: 100%;
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    color: var(--white);
+    font-size: 23px;
+  }
+
+  .menu-icon :hover,
+  nav li :hover {
+    color: var(--highlight);
+  }
+
+  nav li {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+/* repair from JS change of display */
+@media (min-width: 600px) {
+  header nav {
+    display: block !important;
+  }
+}
